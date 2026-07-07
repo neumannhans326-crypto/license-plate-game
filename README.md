@@ -1,32 +1,32 @@
-# Kennzeichen-Spiel
+# License Plate Game
 
-Android-App für Kinder zum Sammeln von Kfz-Kennzeichen während Autofahrten.
+Android app for kids to collect license plates during car trips.
 
-## Konzept
+## Concept
 
-- **Ziel**: Möglichst viele Kennzeichen erfassen
-- **Punkte**: Basierend auf KBA-Statistik (Seltenheit = mehr Punkte)
-  - Normal: 1–10 Punkte pro Kennzeichen
-  - Sonderfall **BÜS** (Büsingen am Hochrhein): 100 Punkte
-- **Doppelte**: Werden erkannt, aber nicht abgestraft – Hinweis: *"Name hat um HH:MM bereits XX erfasst"*
-- **Mehrere Kinder**: Spielen gemeinsam in einer Session ("ein Auto")
+- **Goal**: Capture as many license plates as possible
+- **Points**: Based on German KBA statistics (rarity = more points)
+  - Normal: 1–10 points per license plate
+  - Special case **BÜS** (Büsingen am Hochrhein): 100 points
+- **Duplicates**: Detected but not penalized – notice: *"Name captured XX at HH:MM already"*
+- **Multiple kids**: Play together in one session ("one car")
 
 ## Features
 
-- Spieler-Namen eingeben (1–6 Kinder)
-- Standby-Screen: Buttons mit Namen + aktueller Punktzahl
-- Großbuchstaben-Tastatur zur schnellen Eingabe
-- Nach Erfassung: Statistik-Info + Punkte + Wikipedia-Button
-- Offline-fähig (Daten in Assets + Room-Datenbank)
+- Enter player names (1–6 kids)
+- Standby screen: buttons with names + current score
+- Capital letter keyboard for quick entry
+- After capture: stats info + points + Wikipedia button
+- Offline-capable (data in Assets + Room database)
 
 ## Tech Stack
 
 - Kotlin + Jetpack Compose (Material3)
 - Room Database (offline-first)
-- CSV-Datenbasis im Assets-Ordner (~80 Kennzeichen mit KBA-Daten)
+- CSV data in Assets folder (~80 license plates with KBA data)
 - Min SDK 24, Target SDK 34
 
-## Projektstruktur
+## Project Structure
 
 ```
 kennzeichen-app/
@@ -34,12 +34,12 @@ kennzeichen-app/
 │   ├── src/main/
 │   │   ├── java/com/kennzeichen/app/
 │   │   │   ├── data/database/          # Room Entities & DAOs
-│   │   │   ├── data/repository/        # Business Logic & CSV-Loader
+│   │   │   ├── data/repository/        # Business Logic & CSV Loader
 │   │   │   ├── ui/
 │   │   │   ├── screen/                 # Compose Screens
 │   │   │   ├── component/              # UI Components
 │   │   │   ├── viewmodel/              # ViewModels
-│   │   ├── assets/kennzeichen.csv      # KBA-Daten
+│   │   ├── assets/kennzeichen.csv      # KBA Data
 ```
 
 ## Build
@@ -49,6 +49,6 @@ cd kennzeichen-app
 ./gradlew assembleDebug
 ```
 
-## Lizenz
+## License
 
-[MIT License](LICENSE)
+Private project – not for commercial use.
