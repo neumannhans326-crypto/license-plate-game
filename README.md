@@ -51,4 +51,4 @@ cd license-plate-app
 
 ## License
 
-Private project – not for commercial use.
+This project is licensed under the [MIT License](LICENSE) – see the [LICENSE](LICENSE) file for details.
