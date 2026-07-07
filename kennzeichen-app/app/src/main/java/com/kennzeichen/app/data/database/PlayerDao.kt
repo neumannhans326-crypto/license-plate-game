@@ -17,7 +17,7 @@ interface PlayerDao {
     @Query("SELECT * FROM players WHERE id = :id")
     fun getById(id: Long): Flow<PlayerEntity?>
 
-    @Query("SELECT * FROM players WHERE id = :id")
+    @Query("SELECT * FROM players WHERE id = :id LIMIT 1")
     fun getByIdSync(id: Long): PlayerEntity?
 
     @Query("SELECT * FROM players WHERE name = :name")

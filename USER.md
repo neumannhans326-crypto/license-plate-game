@@ -1,0 +1,21 @@
+# USER.md - About Your Human
+
+_Learn about the person you're helping. Update this as you go._
+
+- **Name:** David
+- **What to call them:** David (or Allmighty Master, apparently)
+- **Pronouns:** (optional)
+- **Timezone:** Europe/Berlin (GMT+2)
+- **Notes:** Prefers no emojis unless explicitly requested. Direct communication style.
+
+## Context
+
+_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+
+---
+
+The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+
+## Related
+
+- [Agent workspace](/concepts/agent-workspace)
