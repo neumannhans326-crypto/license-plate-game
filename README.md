@@ -51,4 +51,4 @@ cd kennzeichen-app
 
 ## Lizenz
 
-Privates Projekt – nicht für kommerzielle Nutzung.
+[MIT License](LICENSE)
