@@ -1,8 +1,11 @@
 package com.kennzeichen.app
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.material3.Material3
 import androidx.compose.material3.Surface
@@ -79,7 +82,16 @@ class MainActivity : ComponentActivity() {
                             _scanResult.value = null
                             viewModel.dismissScanResult()
                         },
-                        onWikipedia = { /* TODO */ }
+                        onWikipedia = { 
+                            val kennzeichen = viewModel.scanResult.value?.kennzeichenEntity
+                            kennzeichen?.let { k ->
+                                val url = "https://de.wikipedia.org/wiki/${k.stadt}"
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                                startActivity(intent)
+                            }
+                            _scanResult.value = null
+                            viewModel.dismissScanResult()
+                        }
                     )
                 }
             }

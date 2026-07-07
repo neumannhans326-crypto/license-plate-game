@@ -122,7 +122,7 @@ class MainViewModel(private val database: AppDatabase) : ViewModel() {
 
     fun openWikipedia(kennzeichen: KennzeichenEntity) {
         val url = "https://de.wikipedia.org/wiki/${kennzeichen.stadt}"
-        // TODO: Open in browser
+        // TODO: Open in browser - handled in MainActivity
     }
 
     data class ScanResult(
