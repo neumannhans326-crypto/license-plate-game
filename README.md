@@ -29,7 +29,7 @@ Android app for kids to collect license plates during car trips.
 ## Project Structure
 
 ```
-kennzeichen-app/
+license-plate-app/
 ├── app/
 │   ├── src/main/
 │   │   ├── java/com/kennzeichen/app/
@@ -45,7 +45,7 @@ kennzeichen-app/
 ## Build
 
 ```bash
-cd kennzeichen-app
+cd license-plate-app
 ./gradlew assembleDebug
 ```
 
