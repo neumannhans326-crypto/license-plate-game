@@ -23,7 +23,7 @@ Android app for kids to collect license plates during car trips.
 
 - Kotlin + Jetpack Compose (Material3)
 - Room Database (offline-first)
-- CSV data in Assets folder (~80 license plates with KBA data)
+- CSV data in Assets folder (90 license plates with KBA data(planned to expand later when the app works with 90 plates))
 - Min SDK 24, Target SDK 34
 
 ## Project Structure
