@@ -13,7 +13,7 @@ Android app for kids to collect license plates during car trips.
 
 ## Features
 
-- Enter player names (1–6 players/kids)
+- Enter player names (1–6 kids/players)
 - Standby screen: buttons with names + current score
 - Capital letter keyboard for quick entry
 - After capture: stats info + points + Wikipedia button
