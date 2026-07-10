@@ -1,0 +1,91 @@
+Kürzel;Stadt;Bundesland;Typ;Bevölkerung;Fläche;Kennzeichen_Start;Kennzeichen_Ende;Ist_Stadt;Ist_Landkreis;Ist_Region;Ist_Kreis;Ist_Region_Kreis;Gesamt;Kfz;Kraftrad;Lastkraftwagen;Zugmaschine;Anhänger;Sonstige
+A;Augsburg;Bayern;Stadt;295000;147;A 1;A 9999;true;true;false;false;false;0;0;0;0;0;0;0
+AA;Aalen;Baden-Württemberg;Landkreis;155000;1443;AA 1;AA 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AB;Aschaffenburg;Bayern;Stadt;70000;62;AB 1;AB 9999;true;true;false;false;false;0;0;0;0;0;0;0
+ABG;Altenburg;Thüringen;Landkreis;90000;569;ABG 1;ABG 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ABI;Anhalt-Bitterfeld;Sachsen-Anhalt;Landkreis;160000;770;ABI 1;ABI 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AC;Aachen;Nordrhein-Westfalen;Städteregion;560000;560;AC 1;AC 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AE;Auerbach;Sachsen;Landkreis;230000;1065;AE 1;AE 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AH;Ahaus;Nordrhein-Westfalen;Landkreis;360000;1418;AH 1;AH 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AIB;Bad Aibling;Bayern;Landkreis;350000;667;AIB 1;AIB 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AIC;Aichach;Bayern;Landkreis;130000;441;AIC 1;AIC 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AK;Altenkirchen;Rheinland-Pfalz;Landkreis;125000;642;AK 1;AK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ALF;Alfeld;Niedersachsen;Landkreis;280000;546;ALF 1;ALF 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ALZ;Alzenau;Bayern;Landkreis;180000;699;ALZ 1;ALZ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AM;Amberg;Bayern;Stadt;42000;50;AM 1;AM 9999;true;false;false;false;false;0;0;0;0;0;0;0
+AN;Ansbach;Bayern;Stadt;40000;38;AN 1;AN 9999;true;true;false;false;false;0;0;0;0;0;0;0
+ANA;Annaberg;Sachsen;Landkreis;130000;728;ANA 1;ANA 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ANG;Angermünde;Brandenburg;Landkreis;120000;3058;ANG 1;ANG 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ANK;Anklam;Mecklenburg-Vorpommern;Landkreis;150000;2458;ANK 1;ANK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AÖ;Altötting;Bayern;Landkreis;110000;569;AÖ 1;AÖ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AP;Apolda;Thüringen;Landkreis;110000;487;AP 1;AP 9999;false;true;false;false;false;0;0;0;0;0;0;0
+APD;Apolda;Thüringen;Landkreis;110000;487;APD 1;APD 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ARN;Arnstadt;Thüringen;Landkreis;100000;487;ARN 1;ARN 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ART;Artern;Thüringen;Landkreis;70000;546;ART 1;ART 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AS;Amberg-Sulzbach;Bayern;Landkreis;100000;956;AS 1;AS 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ASL;Aschersleben;Sachsen-Anhalt;Landkreis;190000;619;ASL 1;ASL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+ASZ;Aue-Schwarzenberg;Sachsen;Landkreis;110000;532;ASZ 1;ASZ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AT;Altentreptow;Mecklenburg-Vorpommern;Landkreis;150000;2356;AT 1;AT 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AU;Aue;Sachsen;Landkreis;110000;532;AU 1;AU 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AUR;Aurich;Niedersachsen;Landkreis;190000;1298;AUR 1;AUR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AW;Ahrweiler;Rheinland-Pfalz;Landkreis;130000;788;AW 1;AW 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AZ;Alzey-Worms;Rheinland-Pfalz;Landkreis;130000;588;AZ 1;AZ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+AZE;Zerbst;Sachsen-Anhalt;Landkreis;160000;770;AZE 1;AZE 9999;false;true;false;false;false;0;0;0;0;0;0;0
+B;Berlin;Berlin;Stadt;3700000;891;B 1;B 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BA;Bamberg;Bayern;Stadt;75000;54;BA 1;BA 9999;true;true;false;false;false;0;0;0;0;0;0;0
+BAD;Baden-Baden;Baden-Württemberg;Stadt;55000;140;BAD 1;BAD 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BAR;Barnim;Brandenburg;Landkreis;180000;1494;BAR 1;BAR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BB;Böblingen;Baden-Württemberg;Landkreis;400000;618;BB 1;BB 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BC;Biberach;Baden-Württemberg;Landkreis;200000;1410;BC 1;BC 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BCH;Buchen;Baden-Württemberg;Landkreis;150000;1124;BCH 1;BCH 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BD;Bundesdienst;bundesweit;Bundesweit;0;0;BD 1;BD 9999;false;false;false;false;true;0;0;0;0;0;0;0
+BE;Beckum;Nordrhein-Westfalen;Landkreis;270000;1304;BE 1;BE 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BED;Brand-Erbisdorf;Sachsen;Landkreis;300000;770;BED 1;BED 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BEL;Bad Belzig;Brandenburg;Landkreis;80000;1756;BEL 1;BEL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BER;Bernau;Brandenburg;Landkreis;180000;1494;BER 1;BER 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BF;Burgsteinfurt;Nordrhein-Westfalen;Landkreis;450000;1796;BF 1;BF 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BGD;Berchtesgaden;Bayern;Landkreis;100000;840;BGD 1;BGD 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BGL;Berchtesgadener Land;Bayern;Landkreis;100000;840;BGL 1;BGL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BH;Bühl;Baden-Württemberg;Landkreis;400000;1056;BH 1;BH 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BI;Bielefeld;Nordrhein-Westfalen;Stadt;330000;258;BI 1;BI 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BID;Biedenkopf;Hessen;Landkreis;240000;1262;BID 1;BID 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BIN;Bingen;Rheinland-Pfalz;Landkreis;210000;606;BIN 1;BIN 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BIR;Birkenfeld;Rheinland-Pfalz;Landkreis;80000;776;BIR 1;BIR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BIT;Bitburg;Rheinland-Pfalz;Landkreis;100000;1142;BIT 1;BIT 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BIW;Bischofswerda;Sachsen;Landkreis;300000;1432;BIW 1;BIW 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BK;Backnang;Baden-Württemberg;Landkreis;400000;1110;BK 1;BK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BKS;Bernkastel-Kues;Rheinland-Pfalz;Landkreis;100000;776;BKS 1;BKS 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BL;Balingen;Baden-Württemberg;Landkreis;200000;917;BL 1;BL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BLB;Bad Berleburg;Nordrhein-Westfalen;Landkreis;130000;1132;BLB 1;BLB 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BLK;Burgenlandkreis;Sachsen-Anhalt;Landkreis;180000;1352;BLK 1;BLK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BM;Bergheim;Nordrhein-Westfalen;Landkreis;470000;705;BM 1;BM 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BN;Bonn;Nordrhein-Westfalen;Stadt;330000;141;BN 1;BN 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BNA;Borna;Sachsen;Landkreis;150000;1002;BNA 1;BNA 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BO;Bochum;Nordrhein-Westfalen;Stadt;360000;145;BO 1;BO 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BÖ;Börde;Sachsen-Anhalt;Landkreis;170000;2366;BÖ 1;BÖ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BOG;Bogen;Bayern;Landkreis;120000;669;BOG 1;BOG 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BOH;Bocholt;Nordrhein-Westfalen;Landkreis;370000;1796;BOH 1;BOH 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BOR;Borken;Nordrhein-Westfalen;Landkreis;370000;1796;BOR 1;BOR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BOT;Bottrop;Nordrhein-Westfalen;Stadt;120000;100;BOT 1;BOT 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BP;Bundespolizei;bundesweit;Bundesweit;0;0;BP 1;BP 9999;false;false;false;false;true;0;0;0;0;0;0;0
+BR;Bruchsal;Baden-Württemberg;Landkreis;450000;1056;BR 1;BR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BRA;Brake;Niedersachsen;Landkreis;60000;1056;BRA 1;BRA 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BRB;Brandenburg an der Havel;Brandenburg;Stadt;70000;229;BRB 1;BRB 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BRG;Burg;Sachsen-Anhalt;Landkreis;90000;1416;BRG 1;BRG 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BRK;Bad Brückenau;Bayern;Landkreis;100000;569;BRK 1;BRK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BRL;Braunlage;Niedersachsen;Landkreis;50000;1056;BRL 1;BRL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BRV;Bremervörde;Niedersachsen;Landkreis=160000;1056;BRV 1;BRV 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BS;Braunschweig;Niedersachsen;Stadt;250000;192;BS 1;BS 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BSB;Bersenbrück;Niedersachsen;Landkreis=360000;2121;BSB 1;BSB 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BSK;Beeskow;Brandenburg;Landkreis=180000;2566;BSK 1;BSK 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BT;Bayreuth;Bayern;Stadt=75000;66;BT 1;BT 9999;true;true;false;false;false;0;0;0;0;0;0;0
+BTF;Bitterfeld;Sachsen-Anhalt;Landkreis=160000;770;BTF 1;BTF 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BÜD;Büdingen;Hessen;Landkreis=300000;1100;BÜD 1;BÜD 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BUL;Burglengenfeld;Bayern;Landkreis=170000;1388;BUL 1;BUL 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BÜR;Büren;Nordrhein-Westfalen;Landkreis=300000;1975;BÜR 1;BÜR 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BÜS;Büsingen am Hochrhein;Baden-Württemberg;Gemeinde=1500;12;BÜS 1;BÜS 9999;true;false;false;false;false;0;0;0;0;0;0;0
+BÜZ;Bützow;Mecklenburg-Vorpommern;Landkreis=220000;2356;BÜZ 1;BÜZ 9999;false;true;false;false;false;0;0;0;0;0;0;0
+BW;Bundeswasserstraßen;bundesweit;Bundesweit=0;0;BW 1;BW 9999;false;false;false;false;true;0;0;0;0;0;0;0
+BWL;Baden-Württemberg Landtag;Baden-Württemberg;Landesregierung=0;0;BWL 1;BWL 9999;false;false;false;false;true;0;0;0;0;0;0;0
+BYL;Bayern Landtag;Bayern;Landesregierung=0;0;BYL 1;BYL 9999;false;false;false;false;true;0;0;0;0;0;0;0
+BZ;Bautzen;Sachsen;Landkreis=300000;2391;BZ 1;BZ 9999;false;true;false;false;false;0;0;0;0;0;0;0

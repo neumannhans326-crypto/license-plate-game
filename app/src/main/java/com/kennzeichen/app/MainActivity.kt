@@ -1,0 +1,171 @@
+package com.kennzeichen.app
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.kennzeichen.app.data.database.AppDatabase
+import com.kennzeichen.app.data.database.KennzeichenEntity
+import com.kennzeichen.app.data.database.PlayerEntity
+import com.kennzeichen.app.data.repository.DataLoader
+import com.kennzeichen.app.data.repository.KennzeichenRepository
+import com.kennzeichen.app.data.repository.PlayerRepository
+import com.kennzeichen.app.data.repository.ScannedRepository
+import com.kennzeichen.app.ui.screen.KennzeichenInputScreen
+import com.kennzeichen.app.ui.screen.PlayerSelectionScreen
+import com.kennzeichen.app.ui.screen.PlayerSetupScreen
+import com.kennzeichen.app.ui.screen.ScanResultDialog
+import com.kennzeichen.app.ui.screen.MainViewModel
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+
+class MainActivity : ComponentActivity() {
+
+    private val database: AppDatabase by lazy { (application as KennzeichenApplication).getDatabase() }
+    private val viewModelFactory = object : ViewModelProvider.Factory {
+        @Suppress("UNCHECKED_CAST")
+        override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
+            return MainViewModel(database) as T
+        }
+    }
+    private val viewModel: MainViewModel by viewModels { viewModelFactory }
+
+    private var _showSetup = mutableStateOf(false)
+    private var _showKeyboard = mutableStateOf(false)
+    private var _scanResult = mutableStateOf<MainViewModel.ScanResult?>(null)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            MaterialTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    KennzeichenAppScreen(
+                        viewModel = viewModel,
+                        showSetup = _showSetup,
+                        showKeyboard = _showKeyboard,
+                        scanResult = _scanResult,
+                        onSetupComplete = { names ->
+                            lifecycleScope.launch {
+                                names.forEach { name ->
+                                    viewModel.addPlayer(name)
+                                }
+                            }
+                            _showSetup.value = false
+                        },
+                        onPlayerSelect = { playerId ->
+                            viewModel.selectPlayer(playerId)
+                            _showKeyboard.value = true
+                        },
+                        onAddPlayer = { _showSetup.value = true },
+                        onDeletePlayer = { playerId ->
+                            viewModel.deletePlayer(playerId)
+                        },
+                        onKennzeichenInput = { text ->
+                            viewModel.inputText = text
+                        },
+                        onSubmit = {
+                            viewModel.onKennzeichenInput(viewModel.inputText)
+                            _scanResult.value = viewModel.scanResult.value
+                        },
+                        onBackFromKeyboard = { _showKeyboard.value = false },
+                        onDismissResult = {
+                            _scanResult.value = null
+                            viewModel.dismissScanResult()
+                        },
+                        onWikipedia = {
+                            val kennzeichen = viewModel.scanResult.value?.kennzeichenEntity
+                            kennzeichen?.let { k ->
+                                val url = "https://de.wikipedia.org/wiki/${k.stadt}"
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                                startActivity(intent)
+                            }
+                            _scanResult.value = null
+                            viewModel.dismissScanResult()
+                        }
+                    )
+                }
+            }
+        }
+        loadInitialData()
+    }
+
+    private fun loadInitialData() {
+        lifecycleScope.launch {
+            val count = database.kennzeichenDao().getCount().first()
+            if (count == 0) {
+                val loader = DataLoader(this@MainActivity)
+                val kennzeichenList = loader.loadKennzeichenData()
+                database.kennzeichenDao().insertAll(kennzeichenList)
+            }
+        }
+    }
+}
+
+@Composable
+fun KennzeichenAppScreen(
+    viewModel: MainViewModel,
+    showSetup: androidx.compose.runtime.MutableState<Boolean>,
+    showKeyboard: androidx.compose.runtime.MutableState<Boolean>,
+    scanResult: androidx.compose.runtime.MutableState<MainViewModel.ScanResult?>,
+    onSetupComplete: (List<String>) -> Unit,
+    onPlayerSelect: (Long) -> Unit,
+    onAddPlayer: () -> Unit,
+    onDeletePlayer: (Long) -> Unit,
+    onKennzeichenInput: (String) -> Unit,
+    onSubmit: () -> Unit,
+    onBackFromKeyboard: () -> Unit,
+    onDismissResult: () -> Unit,
+    onWikipedia: () -> Unit
+) {
+    val players: List<PlayerEntity> by viewModel.players.collectAsStateWithLifecycle()
+    val selectedPlayerId = viewModel.selectedPlayerId
+
+    if (showSetup.value || players.isEmpty()) {
+        PlayerSetupScreen(onStartGame = onSetupComplete)
+    } else if (showKeyboard.value) {
+        val selectedPlayer = players.find { it.id == selectedPlayerId }
+        KennzeichenInputScreen(
+            selectedPlayerName = selectedPlayer?.name ?: "",
+            inputText = viewModel.inputText,
+            onTextChange = onKennzeichenInput,
+            onSubmit = onSubmit,
+            onBack = onBackFromKeyboard
+        )
+    } else {
+        PlayerSelectionScreen(
+            players = players,
+            selectedPlayerId = selectedPlayerId,
+            onPlayerClick = onPlayerSelect,
+            onAddPlayer = onAddPlayer,
+            onDeletePlayer = onDeletePlayer
+        )
+    }
+
+    scanResult.value?.let { result ->
+        ScanResultDialog(
+            result = result,
+            onDismiss = onDismissResult,
+            onWikipedia = onWikipedia
+        )
+    }
+}
